@@ -1,39 +1,43 @@
+function sayHi(){
+console.log("Привет")
+console.log("Как дела?")
+document.querySelector(".block").style.opacity = 0
+}
+sayHi()
+ function myblock(){
+    document.querySelector(".block").style.opacity = 0
+ }
 
 
 
 
-// let name = "Арнольд"
-// for (i=0; i<7; i++){
-//     if (name[i] == "А" || name[i] == "о")
-//     {/* то ничего */}
-//     else{
-//         console.log(name[i])
-//     }
-// }
-
-// let num = 20 
-// for (i=1; i<num; i++){
-//     if (i%3 == 0)
-//         console.log(i)
-// }
 
 
 
 
-// let stat = ""
-// for (i=1; i<6; i++){
-//     stat = stat + i 
-//     console.log(stat)
-// }
 
 
-// let num3 = 4
-// let sum = 0 
-// for(let n = 1; n<=num3; n++){
-//     let fact = 1;
-//     for(let p = 1; p<=n; p++){
-//         fact = fact*p;
-//     }
-//     sum = sum+fact;
-// }
-// console.log(sum)
+
+
+
+ let менюОткрыто = false
+ function img3() {
+    if (менюОткрыто === true){
+        closeMenu();
+        менюОткрыто = false;
+    } else{
+        openMenu();
+        менюОткрыто = true;
+    }
+ }
+
+
+ function change(){
+    let текстВинпуте = document.querySelector("input").value;
+    console.log(текстВинпуте);
+    changeTextSize(текстВинпуте);
+ }
+ function changeTextSize(размер){
+    document.querySelector(".div")
+    .style.fontSize = размер + "px"
+ }
