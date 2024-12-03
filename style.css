@@ -1,74 +1,70 @@
-body{
-    background-color: brown;
+.product-container {
+    display: grid;
+    gap: 20px; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-auto-flow: row dense;
+    padding: 20px;
 }
 
-  
-.test{
-    animation-name: tyu;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    position: absolute;
-    top: 20px;
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
 }
-.корпус{
-    background-color: aqua;
-    width: 220px;
-    height: 50px;
-    position: absolute;
-    left: 40px;
-    top: 310px;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 100px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 5px;
-}
-.колесо1{
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(blue,rgb(255, 153, 0));
-    border-radius: 100%;
-    position: absolute;
-    left: 50px;
-    top: 350px;
-    
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-.колесо2{
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(blue,rgb(255, 153, 0));
-    border-radius: 100%;
-    position: absolute;
-    left: 200px;
-    top: 350px;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-.крыша{
-    width: 80px;
-    height: 50px;
-    background-color: aquamarine;
-    border-top-right-radius: 40px;
-    border-top-left-radius: 10px;
-    position: absolute;
-    left: 130px;
-    top: 260px;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-.iop{
+
+.card img {
     width: 100%;
-    height: 500px;
+    height: auto;
+    border-radius: 8px;
 }
-    @keyframes tyu{ 
-    0%{left: 0}
-    100%{left: 1000px}
-}   
+
+.card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+}
+
+.price {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+
+@media (min-width: 1200px) {
+    .product-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: 1fr; /* 1 колонка */
+    }
+}
+
+.card.special-offer {
+    order: -1;
+}
+
+.body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: yellow;
+}
